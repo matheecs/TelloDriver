@@ -1,11 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-# Author: David Manouchehri <manouchehri@protonmail.com>
-# This script will always echo back data on the UDP port of your choice.
-# Useful if you want nmap to report a UDP port as "open" instead of "open|filtered" on a standard scan.
-# Works with both Python 2 & 3.
-
 import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -22,4 +17,3 @@ while True:
 	print("Echoing data back to " + str(client_address))
 	print(payload)
 	sent = sock.sendto(payload, client_address)
-

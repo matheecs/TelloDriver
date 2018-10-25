@@ -1,20 +1,15 @@
 #
-# Tello Python3 Control Demo 
+# Tello Python Control Demo 
 #
-# http://www.ryzerobotics.com/
-#
-# 1/1/2018
 
 import threading 
 import socket
 import sys
 import time
 
-
 host = '192.168.10.2'
 port = 9000
-locaddr = (host,port) 
-
+locaddr = (host,port)
 
 # Create a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -30,7 +25,6 @@ def recv():
         except:
             print ('\nExit . . .\n')
             break
-
 
 print ('\r\n\r\nTello Python3 Demo.\r\n')
 print ('Tello: command takeoff land flip forward back left right \r\n       up down cw ccw speed speed?\r\n')
@@ -60,7 +54,3 @@ while True:
         print ('\n . . .\n')
         sock.close()  
         break
-
-
-
-

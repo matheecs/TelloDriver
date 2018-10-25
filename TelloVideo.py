@@ -7,8 +7,6 @@ import time
 server_address = '0.0.0.0'
 server_port = 11111
 
-
-
 addr = 'udp://' + server_address + ':' + str(server_port)
 cap = cv2.VideoCapture(addr)
 
