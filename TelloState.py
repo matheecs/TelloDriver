@@ -11,6 +11,7 @@ server_port = 8890
 server = (server_address, server_port)
 sock.bind(server)
 print("Listening on " + server_address + ":" + str(server_port))
+sock.settimeout(1.0)
 
 while True:
 	payload, client_address = sock.recvfrom(200)
